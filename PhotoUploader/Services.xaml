@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PhotoUploader.Services">
+
+    <ScrollView >
+        <FlexLayout  HorizontalOptions="FillAndExpand" Margin="10,10"  VerticalOptions="Center" Direction="Column">
+            <Label Text="Niezgodności usług" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Editor HorizontalTextAlignment="Center" Margin="20,0" FontSize="16" x:Name="projectNumber" HeightRequest="50"/>
+            <Label FontAttributes="Bold"  Text="Numer zamówienia lub WZ:" HeightRequest="30" HorizontalTextAlignment="Center"/>
+
+            <Editor HorizontalTextAlignment="Center" Margin="20,0" FontSize="16" x:Name="materialName" HeightRequest="50"/>
+            <Label FontAttributes="Bold"  Text="Rodzaj usługi:" HeightRequest="30" HorizontalTextAlignment="Center"/>
+            <Picker Title="Miejsce wykrycia" x:Name="placeUI"   HorizontalTextAlignment="Center"
+                        HorizontalOptions="FillAndExpand"/>
+            <ListView MaximumHeightRequest="240" MinimumHeightRequest="95" x:Name="elements" RowHeight="96" SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="*"/>
+
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+
+                                </Grid.RowDefinitions>
+
+
+
+
+                                <Label Text="{Binding Category, StringFormat='Kategoria: {0}'}" Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                                <Label Text="{Binding Subcategory , StringFormat='Podkategoria: {0}'}" Grid.Column="1" Grid.Row="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                                <Label Text="{Binding Amount,StringFormat='Ilość: {0}'}"  Grid.Column="0" Grid.Row="1"  HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center"/>
+
+
+                                <Button Text="-" Grid.Column="1" Grid.Row="1" HeightRequest="48" WidthRequest="48" Clicked="removeElement" BindingContext="{Binding Id}"/>
+
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+
+            </ListView>
+            <Border  HeightRequest="300">
+                <Grid Margin="0,20" ColumnSpacing="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="3*"/>
+
+
+                    </Grid.ColumnDefinitions>
+
+                    <Picker Grid.Row="0"  Grid.ColumnSpan="2" x:Name="categoriesUI" SelectedIndexChanged="updateSubcategories" Title="Kategoria błędu"  HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+
+
+                    <Picker Grid.Row="1" Grid.ColumnSpan="2" x:Name="subcategoriesUI" Title="Podkategoria błędu"   HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" IsEnabled="False"/>
+
+                    <VerticalStackLayout  Grid.Column="0" Grid.Row="2">
+                        <Editor x:Name="elementAmount"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+
+                        <Label FontAttributes="Bold"  Text="Ilość:"  HorizontalTextAlignment="Center"/>
+                    </VerticalStackLayout>
+                    <Button Text="+" Clicked="addElement" Grid.Column="1" Grid.Row="2" HeightRequest="48" WidthRequest="48"/>
+
+
+                </Grid>
+            </Border>
+
+
+
+
+
+
+            <Editor x:Name="descAndComment" HeightRequest="50"/>
+
+            <Label Text="Opis i komentarz:" HeightRequest="30"  HorizontalTextAlignment="Center"/>
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Always" HeightRequest="100">
+                <CollectionView x:Name="photosUI" HeightRequest="100">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Margin="6,0" HeightRequest="100">
+
+                                <Image Source="{Binding FullPath}" HeightRequest="100"   />
+                                <Button Clicked="removePhoto" BindingContext="{Binding FullPath}" Text="X" WidthRequest="30" Padding="0" HeightRequest="30" BackgroundColor="Red" ZIndex="30" TextColor="White"  HorizontalOptions="Start" TranslationY="-101"/>
+
+
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Button Text="Dodaj zdjęcie" Clicked="chooseImage" Margin="5,5" Padding="20,0"/>
+                <Button Text="Zrób zdjęcie" Clicked="takePicture" Margin="5,5" Padding="20,0"/>
+            </HorizontalStackLayout>
+            <Button Text="Wyślij" Clicked="sendPhoto" Margin="0,5" HorizontalOptions="Center" Padding="80,0"/>
+
+
+        </FlexLayout>
+    </ScrollView>
+
+</ContentPage>

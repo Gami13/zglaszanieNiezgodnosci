@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="PhotoUploader.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PhotoUploader"
+    Shell.FlyoutBehavior="Disabled">
+    <Shell.ToolbarItems>
+        <ToolbarItem Text="Powrót" Clicked="goBack" Order="Primary" />
+    </Shell.ToolbarItems>
+
+    
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+        Title="Test"
+        ContentTemplate="{DataTemplate local:InProduction}"
+        Route="InProduction" />
+    <ShellContent
+        Title="Test"
+        ContentTemplate="{DataTemplate local:MaterialDelivery}"
+        Route="MaterialDelivery" />
+    <ShellContent
+        Title="Test"
+        ContentTemplate="{DataTemplate local:Services}"
+        Route="Services" />
+    <ShellContent
+        Title="Test"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="Main" />
+    <ShellContent
+        Title="Test"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="Main" />
+
+</Shell>

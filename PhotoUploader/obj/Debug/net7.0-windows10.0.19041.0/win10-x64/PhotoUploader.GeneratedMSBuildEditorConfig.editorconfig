@@ -1,0 +1,71 @@
+is_global = true
+build_property.TargetFramework = net7.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PhotoUploader
+build_property.ProjectDir = C:\Users\praktykant\source\repos\PhotoUploader\PhotoUploader\
+
+[C:/Users/praktykant/source/repos/PhotoUploader/PhotoUploader/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PhotoUploader.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/praktykant/source/repos/PhotoUploader/PhotoUploader/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PhotoUploader.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/praktykant/source/repos/PhotoUploader/PhotoUploader/InProduction.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PhotoUploader.InProduction.xaml
+build_metadata.AdditionalFiles.TargetPath = InProduction.xaml
+build_metadata.AdditionalFiles.RelativePath = InProduction.xaml
+
+[C:/Users/praktykant/source/repos/PhotoUploader/PhotoUploader/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PhotoUploader.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/praktykant/source/repos/PhotoUploader/PhotoUploader/MaterialDelivery.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PhotoUploader.MaterialDelivery.xaml
+build_metadata.AdditionalFiles.TargetPath = MaterialDelivery.xaml
+build_metadata.AdditionalFiles.RelativePath = MaterialDelivery.xaml
+
+[C:/Users/praktykant/source/repos/PhotoUploader/PhotoUploader/Placeholder 2.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PhotoUploader.Placeholder 2.xaml
+build_metadata.AdditionalFiles.TargetPath = Placeholder 2.xaml
+build_metadata.AdditionalFiles.RelativePath = Placeholder 2.xaml
+
+[C:/Users/praktykant/source/repos/PhotoUploader/PhotoUploader/Placeholder.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PhotoUploader.Placeholder.xaml
+build_metadata.AdditionalFiles.TargetPath = Placeholder.xaml
+build_metadata.AdditionalFiles.RelativePath = Placeholder.xaml
+
+[C:/Users/praktykant/source/repos/PhotoUploader/PhotoUploader/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PhotoUploader.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/praktykant/source/repos/PhotoUploader/PhotoUploader/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PhotoUploader.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/praktykant/source/repos/PhotoUploader/PhotoUploader/Services.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PhotoUploader.Services.xaml
+build_metadata.AdditionalFiles.TargetPath = Services.xaml
+build_metadata.AdditionalFiles.RelativePath = Services.xaml
